@@ -1,8 +1,11 @@
 import React from 'react'
-import { Tab, Segment, Grid } from 'semantic-ui-react'
-import NewsPane from './NewsPane';
+import { Grid } from 'semantic-ui-react'
+import NewsPane from './NewsPane'
 
 const newsTabs = [{ 'name': 'Tab 1' }, { 'name': 'Tab 2' }, { 'name': 'Tab 3' }]
+
+
+
 const renderWidgets = widgets => {
   return (
     <Grid divided='vertically' stackable={true}>
@@ -20,8 +23,8 @@ const renderWidgets = widgets => {
 class Guildboard extends React.Component {
   render() {
     return (
-      renderWidgets([<NewsPane tabs={newsTabs} id="Landing_News"/>,
-        <NewsPane tabs={newsTabs} id="Landing_News"/>
+      renderWidgets([<NewsPane name="Manga" tabs={newsTabs} id="Landing_News"/>,
+        <NewsPane name="Light Novel" tabs={newsTabs} id="Landing_News"/>
       ])
     )
   }

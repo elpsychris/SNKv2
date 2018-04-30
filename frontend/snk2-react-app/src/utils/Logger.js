@@ -1,9 +1,9 @@
 var isLog = true
-const log = (msg, caller) => {
+const writeLog = (msg, caller) => {
     if (isLog) {
         console.log("[" + caller + "]: " + msg)
     }
 }
 
-export default log
+export default writeLog
 
